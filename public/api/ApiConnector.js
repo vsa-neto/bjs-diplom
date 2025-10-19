@@ -19,7 +19,7 @@ class ApiConnector {
    * Отправляет запрос на авторизацию пользователя
    *
    * @static
-   * @param {*} { username, password }
+   * @param {*} { login, password }
    * @param {Function} callback-функция с телом `data` в качестве параметра
    * @memberof ApiConnector
    */

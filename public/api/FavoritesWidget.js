@@ -1,4 +1,4 @@
-class FavoritesWidget {
+ class FavoritesWidget {
   constructor() {
     this.favoritesTableBody = document.querySelector('table.table.addresses tbody');
     this.addUserToFavoritesForm = document.getElementById('addUser');
