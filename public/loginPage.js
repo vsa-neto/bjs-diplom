@@ -15,7 +15,7 @@
               console.log(data);
          }
      });
- }
+ };
 
  userForm.registerFormCallback = data => {
     //  console.log(data);
@@ -26,7 +26,7 @@
             userForm.setLoginErrorMessage("что-то пошло не так");
          }
      });
- }
+ };
 
 
 
