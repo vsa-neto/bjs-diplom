@@ -10,7 +10,7 @@
                console.log(callback.success);
              location.reload();
          } else {
-             userForm.setLoginErrorMessage("попробуйте снова");
+             userForm.setLoginErrorMessage(callback.error);
               console.log(callback);
               console.log(data);
          }
@@ -23,7 +23,7 @@
          if (callback.success) {
              location.reload();
          } else {
-            userForm.setLoginErrorMessage("что-то пошло не так");
+            userForm.setRegisterErrorMessage(callback.error);
          }
      });
  };

@@ -42,7 +42,7 @@ moneyManager.addMoneyCallback = data => {
         moneyManager.setMessage(true, "пополнение выполнено");
         // console.log(callback.data);
         } else {
-         moneyManager.setMessage(false, "что-то пошло не так");
+         moneyManager.setMessage(false, callback.error);
         }
         
     });
@@ -55,7 +55,7 @@ moneyManager.conversionMoneyCallback = data => {
         moneyManager.setMessage(true, "конвертация выполнена");
         // console.log(callback.data);
         } else {
-         moneyManager.setMessage(false, "что-то пошло не так");
+         moneyManager.setMessage(false, callback.error);
         }
         
     });
@@ -68,7 +68,7 @@ moneyManager.sendMoneyCallback = data => {
         moneyManager.setMessage(true, "перевод выполнен");
         // console.log(callback.data);
         } else {
-         moneyManager.setMessage(false, "что-то пошло не так");
+         moneyManager.setMessage(false, callback.error);
         }
         
     });
@@ -85,7 +85,7 @@ ApiConnector.getFavorites(callback => {
         moneyManager.updateUsersList(callback.data);
         moneyManager.setMessage(true, "список пользователей обновлен");
         } else {
-         moneyManager.setMessage(false, "что-то пошло не так");
+         moneyManager.setMessage(false, callback.error);
         }
 });
 
@@ -97,7 +97,7 @@ favoritesWidget.addUserCallback = data => {
         moneyManager.updateUsersList(callback.data);
         favoritesWidget.setMessage(true, "пользователь добавлен");
         } else {
-         favoritesWidget.setMessage(false, "что-то пошло не так");
+         favoritesWidget.setMessage(false, callback.error);
         }
     });
 };
@@ -110,7 +110,7 @@ favoritesWidget.removeUserCallback = id => {
         moneyManager.updateUsersList(callback.data);
         favoritesWidget.setMessage(true, "пользователь удален из адресной книги");
         } else {
-         favoritesWidget.setMessage(false, "что-то пошло не так");
+         favoritesWidget.setMessage(false, callback.error);
         }
     });
 };
